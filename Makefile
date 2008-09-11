@@ -12,7 +12,7 @@ push: commit
 	
 commit: generate_pdf
 	@echo 'Commiting to git repository'
-	git commit -a -m "$COMMENT"
+	git commit -a -m "$(COMMENT)"
 
 view_pdf: generate_pdf
 	@echo 'Opening generated PDF file'
