@@ -27,5 +27,5 @@ generate_pdf: $(TEX_FILE) $(BIB_FILE)
 	pdflatex $(TEX_NAME)
 
 clean:
-	rm -Rf $(TEX_NAME).{aux,log,out,blg,bbl,pdf} *~
+	rm -Rf $(TEX_NAME).{aux,rel,log,out,blg,bbl,pdf} *~
     

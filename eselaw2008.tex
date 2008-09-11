@@ -44,11 +44,12 @@
 
 In order to start talking about open source and agile methods, it is
 necessary to first define what is understood by such words in the
-following work. The most controversial definition is the open source
-one while agile methods are more simply defined.
+following work. Agile methods are more simply defined at section
+\ref{subsec:agile-def} while the most controversial definition, the
+open source one, is given at section \ref{subsec:os-def}.
 
 \subsection{Agile methods definition}
-\label{sec:agile-def}
+\label{subsec:agile-def}
 
 This work will consider that any software engineering methodology that
 follows the principles in the Agile Manifesto \cite{AgileManifesto} is
@@ -56,10 +57,11 @@ an agile method. Focus will be layed on the most known methods such as
 Extreme Programming \cite{XP01,XP02}, Scrum
 \cite{Schwaber2001,Schwaber2004} and the Crystal family
 \cite{Cockburn2002}. Closely related ideas will also be mentioned from
-the wider Lean philosophy \cite{Poppendieck2003}.
+the wider Lean philosophy \cite{Ohno1998} and its application to
+software development \cite{Poppendieck2005,Poppendieck2003}.
 
 \subsection{Open source definition}
-\label{sec:os-def}
+\label{subsec:os-def}
 
 The terms ``Open source software'' and ``Free software'' will be
 considered the same in this work although they have important
@@ -78,10 +80,14 @@ software engineering methodology since the company can enforce it to
 her employees. Some methodologies will work better to attract external
 contributions but the company is still in control of its own team.
 
-% Falar da diferença entre liderança numa empresa e numa comunidade
+With a community project, nobody can enforce volunteers to follow a
+specific work way or those will abandon the project. In such
+situation, the methodology must be accepted and embraced by all people
+involved. Therefore the software engineering methods used must be
+lightweight. %Achar uma referencia sobre lightweight vs heavyweight
 
 \section{Introduction}
-\label{sec:intr}
+\label{sec:intro}
 
 Open source projects usually receive the collaboration of many
 geographically distant people who do not share any organizational
@@ -104,8 +110,8 @@ having both brought great benefit to the software community. During
 the same workshop the question was raised whether the use of several
 failed silver bullets simultaneously could not, in fact, raise
 production levels in an order of magnitude. This paper is an attempt
-to start this sort of merging to stun the werewolf, i.e., stop
-problems from appearing unexpectedly.
+to suggest one of those mergings to partially stop problems from
+appearing unexpectedly.
 
 Section \ref{sec:foss} will present some aspects of major open source
 communities that could be improved with agile practices and
@@ -232,14 +238,31 @@ most known agile methods.
 \section{Agile going Open source}
 \label{sec:agile}
 
-Not only, as previously shown, agile methodologies lack some special
-solutions related to open source development, but they could also
-benefit from solving some of the issues FOSS project suffer
-from. Section \ref{subsec:agile-lacks} will describe with more details
-some specific points of FOSS development that would need a specific
-approach. The next one (Section \ref{subsec:agile-self-improv}) will
-shortly present some benefits that agile would receive from attempts
-to solve those problems.
+At Agile 2008, Mary Poppendieck led a workshop with Christian Reis to
+discuss successful practices in an open source project that could not
+be found in Agile methods. The goal was to capture some essential
+principles that were applied to open source projects and could help
+agile methods. A short summary of the discussion can be found in
+section \ref{subsec:foss-over-agile}.  Thinking the other way around,
+agile methodologies lack some special solutions related to open source
+development. Section \ref{subsec:agile-lacks} discuss with more
+details some specific points of FOSS development that would need a
+specific approach from an agile perspective. Finally section
+\ref{subsec:agile-self-improv} will shortly present some benefits that
+agile would receive from attempts to solve those problems.
+
+\subsection{FOSS principles agile should learn from}
+\label{subsec:foss-over-agile}
+
+The workshop, intitled ``Open Source Meets Agile - What can each teach
+the other?'', was coordinated by Mary Poppendieck and had Christian
+Reis as the invited guest. Christian is a Brazilian open source
+developer working at Canonical Inc. on the development of LaunchPad,
+the project management software for Ubuntu Linux distribution. The
+workshop started with Christian's presetation on how LaunchPad is
+developed. During the presentation and once it was done, the group had
+some questions that helped understand the practices that the team
+follows.
 
 \subsection{Agile helping FOSS}
 \label{subsec:agile-lacks}
@@ -262,7 +285,8 @@ undertaken.
   requirement?
 \item How should providing feedback be handled within an iteration?
 \item Should plans be made counting on external help or not?
-\item If so, how to estimate expectations about outside contributions?
+\item If so, how to estimate expectations about external
+  contributions?
 \item What tools or measures should be used to make it easier for
   people to contribute?
 \item How should commits be approved or denied?
