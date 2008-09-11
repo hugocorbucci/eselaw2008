@@ -1,0 +1,27 @@
+%-----------------------------------------------------------------------------
+% GRAPHICS.STY
+% ~~~~~~~~~~~~
+% The actual macros defined by this are called \largeVT, etc; the `240'
+% is actually part of the ``parameter template''.  Dirty, but it works!!
+%
+%   \gr@phins{sixel_file}{height}{width}
+%-----------------------------------------------------------------------------
+\def\gr@phins#1#2#3{{\hbox to#3{\vbox to#2{\special{ln03:sixel #1}\vfil}\hfil}}}
+
+\def\largeVT240#1{\gr@phins{#1}{3.2in}{5.33333in}}
+\def\smallVT240#1{\gr@phins{#1}{1.6in}{2.66667in}}
+\def\largeVis550#1{\gr@phins{#1}{3.90in}{5.12in}}
+\def\smallVis550#1{\gr@phins{#1}{1.95in}{2.56in}}
+\def\gino(#1,#2)#3{\gr@phins{#3}{#2\unitlength}{#1\unitlength}}
+
+%
+%-----------------------------------------------------------------------------
+% \MatlabPlot{sixel_file}
+%-----------------------------------------------------------------------------
+\def\MatlabPlot#1{\gr@phins{#1}{3.00in}{5.00in}}
+
+%
+%-----------------------------------------------------------------------------
+% \SixelPlot{sixel_file}{height}{width}
+%-----------------------------------------------------------------------------
+\def\SixelPlot#1#2#3{\gr@phins{#1}{#2}{#3}}

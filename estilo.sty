@@ -1,0 +1,228 @@
+%%%%% INCLUDES
+%% Colocando identação no primeiro parágrafo de cada tópico
+\usepackage{indentfirst}
+
+%% Floating package
+\usepackage{floatflt}%,epsfig,epsf}
+\usepackage[dvips]{graphicx,psfrag}
+
+\usepackage{enumerate}
+\usepackage{euscript}
+\usepackage{amssymb, amsmath}
+\usepackage{amstext}
+\usepackage{amsopn}
+\usepackage{mathrsfs}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{nicefrac}
+\usepackage{path}
+\usepackage{ifthen}
+
+
+%%% Funções
+\renewcommand{\sin}{\mbox{sen\ }}
+\newcommand{\difsim}{\bigtriangleup}
+
+%%% Caligráficos 1
+\newcommand{\Acal}{{\mathcal A}}
+\newcommand{\Bcal}{{\mathcal B}}
+\newcommand{\Ccal}{{\mathcal C}}
+\newcommand{\Fcal}{{\mathcal F}}
+\newcommand{\Lcal}{{\mathcal L}}
+\newcommand{\Pcal}{{\mathcal P}}
+\newcommand{\Qcal}{{\mathcal Q}}
+\newcommand{\Scal}{{\mathcal S}}
+\newcommand{\Tcal}{{\mathcal T}}
+\newcommand{\Ucal}{{\mathcal U}}
+\newcommand{\Xcal}{{\mathcal X}}
+\newcommand{\Ycal}{{\mathcal Y}}
+\newcommand{\Zcal}{{\mathcal Z}}
+
+%%% Caligráficos 2
+\newcommand{\calA}{\EuScript{A}}
+\newcommand{\calB}{\EuScript{B}}
+\newcommand{\calC}{\EuScript{C}}
+\newcommand{\calD}{\EuScript{D}}
+\newcommand{\calF}{\EuScript{F}}
+\newcommand{\calI}{\EuScript{I}}
+\newcommand{\calJ}{\EuScript{J}}
+\newcommand{\calL}{\EuScript{L}}
+\newcommand{\calP}{\EuScript{P}}
+\newcommand{\calR}{\EuScript{R}}
+\newcommand{\calS}{\EuScript{S}}
+\newcommand{\calT}{\EuScript{T}}
+\newcommand{\calU}{\EuScript{U}}
+\newcommand{\calV}{\EuScript{V}}
+\newcommand{\calW}{\EuScript{W}}
+\newcommand{\calX}{\EuScript{X}}
+\newcommand{\calY}{\EuScript{Y}}
+\newcommand{\calZ}{\EuScript{Z}}
+
+
+%%% ???
+\newcommand{\Pdir}{{{\overrightarrow{P}}}}
+\newcommand{\Prev}{{{\overleftarrow{P}}}}
+\newcommand{\seq}[1]{\langle #1 \rangle}
+\newcommand{\conj}[1]{\{ #1 \}}
+\newcommand{\card}[1]{|#1|}
+\newcommand{\norma}[1]{\|#1\|}
+\newcommand{\floor}[1]{\lfloor#1\rfloor}
+\newcommand{\xfloor}[2]{#1\lfloor#2#1\rfloor}
+\newcommand{\tq}{\mid}
+
+\newcommand{\sgb}{\textsc{sgb}{}}
+\newcommand{\cweb}{\textsc{cweb}{}}
+\newcommand{\NP}{\textup{NP}{}}
+\newcommand{\leda}{\textsc{leda}{}}
+\newcommand{\defi}[1]{\textbf{#1}}
+\renewcommand{\P}{\textup{P}{}}
+
+%%% Notação assintótica
+\newcommand{\Oh}{\textup{O}}
+
+\newcommand{\defic}{\textrm{def}} %% deficiência
+
+
+%%% Conjuntos numéricos
+\def\Rset{{\mathbb R}}
+\def\Zset{{\mathbb Z}}
+\def\Eset{{\mathbb E}}
+\def\Nset{{\mathbb N}}
+
+
+%%% Provas, teoremas, etc
+\newcommand{\prova}{\noindent\textbf{Prova. }}
+\newcommand{\fimprova}{
+\hfill\qedsymbol\medskip\ignorespacesafterend
+}
+\newtheorem{teorema}{Teorema}
+\newtheorem{lema}[teorema]{Lema}
+\newtheorem{corolario}[teorema]{Corolário}
+%\newtheorem{problema}[teorema]{Problema}
+
+\newenvironment{baretheorem}%
+         {\begin{list}%
+                {}%
+                {%
+                 %\addtolength{\partopsep}{0.5ex}%
+                 \setlength{\partopsep}{1ex}% igual em prova
+%                \addtolength{\topsep}{-0.5ex}%
+                 \setlength{\topsep}{0.8ex}% igual prova
+                 \setlength{\leftmargin}{\parindent}%
+                 \setlength{\rightmargin}{\parindent}%
+                 \setlength{\itemindent}{0ex}%
+                 \setlength{\labelsep}{\itemindent}%
+                 \setlength{\labelwidth}{0ex}%
+                 \setlength{\parsep}{1ex}% parskip is 1.5ex
+                 \setlength{\listparindent}{0ex}%
+                }%
+          \item%
+         }%
+         {\end{list}%
+         }
+
+\newcounter{theoremnumber}%[section]
+\renewcommand{\thetheoremnumber}{\arabic{theoremnumber}}
+\newenvironment{taggednumberedtheorem}[2]%
+               {%
+                \refstepcounter{theoremnumber}%
+                \begin{baretheorem}%
+                \textbf{#1\hspace{0.7ex}\thetheoremnumber}%
+                \ifthenelse{\equal{#2}{}}% Lamport p.195
+                        {\hspace{1pt}:\hspace{1ex}\ignorespaces}%
+                        {\hspace{1ex}\textup{(#2)}:\hspace{1ex}\ignorespaces}%
+                \slshape%
+               }%
+               {\end{baretheorem}%
+               }
+% Example:
+% \begin{taggednumberedtheorem}{Lema}{da dualidade canônica}
+% Para\label{lema:dualidade}
+% todo  $x$  em $X(A,b)$ e todo $y$ em $Y(A,c)$ tem-se $cx \geq yb$.
+% \end{taggednumberedtheorem}
+
+% alguns ambientes auxiliares usando o ambiente do paulo %fkm
+\newenvironment{problema}[1]%
+       {\begin{baretheorem}%
+        \textbf{Problema}\hspace{1ex}{#1}:\hspace{1ex}\ignorespaces%
+        \slshape%
+       }%
+       {\end{baretheorem}%
+       }
+
+
+
+
+% PROGRAMAS LINEARES (pf)
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\plspA}{\hspace{1.5ex}}
+\newcommand{\plspB}{\hspace{2ex}}
+% programa linear:
+\newenvironment{linearprogram}[0]% 5 columns
+               {%
+                \[
+                \begin{array}{r@{\plspB}% \mbox{sob as restrições}
+                              r@{\plspA}% x_j
+                              c@{\plspA}% \geq 
+                              l@{\plspB}% 0
+                              l%          \mbox{para cada j}
+                             }
+                %*% \rule[0ex]{0pt}{2ex}% era 3ex
+               }%
+               {%
+                %\rule[-2ex]{0pt}{3ex}%
+                \end{array}
+                \] %*% \\ % dirty hacking 
+                % to avoid unwanted hspace after environment
+                % \ignorespaces \unskip (LaTeX Comapnion, p.61) has no effect
+               }
+% programa linear dentro de equation, para quem precisa da numeração:
+\newenvironment{linearprogramequation}[0]% 5 columns
+               {%
+                \begin{equation}
+                \begin{array}{r@{\plspB}% \mbox{sob as restrições} 
+                              r@{\plspA}% x_j
+                              c@{\plspA}% \geq
+                              l@{\plspB}% 0
+                              l%          \mbox{para cada j}
+                             }
+                %*% \rule[0ex]{0pt}{2ex}% era 3ex
+               }%
+               {%
+                %\rule[-2ex]{0pt}{3ex}%
+                \end{array}
+                \end{equation} %*% \\
+               }
+% programa linear com sigla (a sigla é argumento do ambiente)
+\newenvironment{displaylinearprogramwlabel}[1]% 
+               {%
+                \[
+                \mbox{#1}\qquad
+                \begin{array}{l@{\plspB}% sob as restrições
+                              r@{\plspA}% x_j
+                              c@{\plspA}% \geq
+                              l@{\plspB}% 0
+                              l%          para cada j
+                             }
+                \rule[0ex]{0pt}{4ex}%
+               }%
+               {%
+                %\rule[-3ex]{0pt}{4ex}%
+                \end{array}
+                \]\\[0.8ex]
+               }
+
+
+
+
+%%% ???2
+\renewcommand{\contentsname}{2.\enspace Índice}
+\renewcommand{\refname}{Bibliografia}
+%\setcounter{tocdepth}{2}
+
+%%% FAPESP
+\def\FAPESP{\textsc{fapesp}}
+
+%%% ???3
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}

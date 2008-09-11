@@ -1,0 +1,284 @@
+\documentclass[12pt]{article}
+
+\usepackage{sbc-template}
+\usepackage[latin1]{inputenc}
+\usepackage{indentfirst}
+\usepackage{lscape}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{graphics,url}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+
+\sloppy
+
+\title{Open Source and Agile:\\Two worlds that should have a closer
+  interaction}
+
+\author{Hugo Corbucci\inst{1} and Alfredo Goldman\inst{1}}
+
+\address{Instituto de Matemática e Estatística (IME)\\Universidade de São
+  Paulo (USP) - Brazil
+\email{\{corbucci,gold\}@ime.usp.br}
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+  Agile methods and open source software communities share similar
+  cultures with different approaches to overcome problems. Although
+  several people are involved in both worlds, neither agile
+  methodologies are as strong as they could be in open source
+  communities nor those communities are strong factors in agile
+  methods. This work intends to identify and expose the obstacles that
+  separate those communities in order to extract the best of them and
+  improve both sides with suggestions of tools and development
+  processes.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intr}
+
+Open source projects usually receive the collaboration of many
+geographically distant people who do not share any organizational
+structure. At first, this argument could indicate that such projects
+are not candidates for the use of agile methods since some basic
+values seem to be damaged. For example, the distance and diversity
+separating developers surely deteriorate communication, one of the
+most important values within agile methods. However, most open source
+projects share principles with the Agile Manifesto
+\cite{AgileManifest}. Being ready for changes, working with continuous
+feedback, delivering real features, respecting collaborators and users
+and facing challenges are expected attitudes from agile developers
+naturally found in the Free and Open Source Software (FOSS)
+communities.
+
+During a workshop \cite{OOPSLA07} about ``No Silver Bullets''
+\cite{Brooks1987} held at OOPSLA 2007, Agile methods and Open Source
+Software Development were mentioned as two failed silver bullets
+having both brought great benefit to the software community. During
+the same workshop the question was raised whether the use of several
+failed silver bullets simultaneously could not, in fact, raise
+production levels in an order of magnitude. This paper is an attempt
+to start this sort of merging to stun the werewolf, i.e., stop
+problems from appearing unexpectedly.
+
+Section \ref{sec:foss} will present some aspects of major open source
+communities that could be improved with agile practices and
+principles. The following section (Section \ref{sec:agile}) will focus
+on the problems agile methods pose when dealing with distributed teams
+and scaling to big teams which have somehow already been addressed in
+open source development. Finally, Section \ref{sec:conclusion} will
+present the work planned and being done.
+
+\section{Is Open source Agile?}
+\label{sec:foss}
+
+Open source communities could almost be considered agile and they
+indeed were by Martin Fowler in his first version of ``The New
+Methodology'' \cite{Fowler00orig}. The methods that Eric Raymond
+describes in ``The Cathedral and the Bazaar'' \cite{Raymond98} lack a
+more precise definition but several ideas could be related to the
+Agile Manifesto. The next four subsections will discuss the relations
+of open source to the four points principles of the manifesto and the
+fifth one will summarize points where open source could improve
+towards agility.
+
+\subsection{Individuals and interactions over processes and tools}
+\label{subsec:first-princ}
+
+Project processes usually include feature freezing, version branches,
+commit reviews and several other good practices or rules. Most of the
+time, tools are used to enable those practices and other ones are
+present and widely used. Several of the tools used in the open
+software process are also used in the agile software development, such
+as version control programs. \textbf{The processes and tools} are,
+however, just a means to achieve a goal: ensuring a stable and
+welcoming environment to create software collaboratively.
+
+Although open source businesses are growing stronger, the very essence
+of the community around the software is to have \textbf{individuals
+  that interact} in order to produce what interests them. In those
+communities, the interaction is usually related to source code
+collaboration and documentation elaboration regardless of the business
+model. Those activities are responsible for driving the whole process
+and modifying the tools to better fit their needs.
+
+\subsection{Working software over comprehensive documentation}
+\label{subsec:second-princ}
+
+A lot of open source projects are heavily criticized for their
+documentations or the lack of it. This comes from the fact that most
+developers are not committed on writing documentation. More likely,
+they prefer to have a neat software that is intuitive for users. The
+result is that new projects hardly have any sort of documentation
+except the minimum required for the own developer team to be able to
+work.
+
+\textbf{Comprehensive documentation} grows with the community that
+builds around the \textbf{working software}, as users encounter
+problems to complete a specific action. It is frequent to have
+documentation written by volunteer users to help their
+colleagues. This work generates documents in a language that users
+understand but that only deal with common problems. Specific problems
+and solutions are much harder to find.
+
+\subsection{Customer collaboration over contract negotiation}
+\label{subsec:third-princ}
+
+\textbf{Contract negotiation} is still only a problem to very few open
+source projects since a huge number of them do not involve
+contracts. On the other hand, those involving contracts are usually
+based on a service concept in which the customer hires a programmer or
+company to develop a certain feature for a small amount of
+time. Although this business model does not ensure that the customer
+will collaborate, it may shorten time between conversations, therefore
+improving feedback and reducing the strength of long and rigid
+contracts.
+
+The key point here is that collaboration is the basis of open source
+projects. The customer is involved as much as he desires to
+be. \textbf{Customers can collaborate} but they are not especially
+encouraged or forced to do so. This might be related to the small
+amount of experience this communities has with customer
+relationships. However, several successful projects rely on fast
+answers to demanded features from users.  In this case customer
+collaboration allied with responsiveness are specially powerful.
+
+\subsection{Responding to change over following a plan}
+\label{subsec:fourth-princ}
+
+Open source projects tend to have a plan of milestones or releases
+but, in most cases, those plans are always short term plans. Even when
+long term plans exist, they are not the main guidelines followed by
+the developer team. They are only goals sought without any pressure to
+be met.
+
+Being too demanding about \textbf{following a plan} can drag a whole
+project down in the open source world. The main reason is the highly
+competitive environment of this universe where only the best projects
+survive. The \textbf{ability of each project to adapt and respond to
+  changes} is crucial to determine those who survive. No marketing
+campaign or business deal can save a project from abandonment if it
+cannot compete with a newcomer that adapts more quickly to user needs.
+
+\subsection{What is missing on open source?}
+\label{subsec:os-summary}
+
+Although several points of the Agile Manifesto are followed within
+open source communities, nothing is certain because there is no such
+thing as an open source method. Raymond's description is a great
+example of how the process can work but it does not discriminate
+guidelines and practices to be followed. If a full open source agile
+method description was written with the use of compatible tools
+merging the ideas presented by Raymond, it would follow the same
+selection rules as the projects. If successful, its adoption would
+then spread around the community improving and correcting it over
+time.
+
+Communities created around FOSS projects involve users, developers,
+and sometimes even clients working together to craft the best software
+possible. The absence of such community around a program usually
+denounces a recent project or one that is dying. This means that the
+development team must be very attentive to this community since it
+shows how well the project is going. Nowadays, concerns related to
+this aspect of FOSS development are not specifically considered by the
+most known agile methods.
+
+\section{Agile going Open source}
+\label{sec:agile}
+
+Not only, as previously shown, agile methodologies lack some special
+solutions related to open source development, but they could also
+benefit from solving some of the issues FOSS project suffer
+from. Section \ref{subsec:agile-lacks} will describe with more details
+some specific points of FOSS development that would need a specific
+approach. The next one (Section \ref{subsec:agile-self-improv}) will
+shortly present some benefits that agile would receive from attempts
+to solve those problems.
+
+\subsection{Agile helping FOSS}
+\label{subsec:agile-lacks}
+
+Agile development so far has been described as a way to develop
+software within companies with contracts and employees. Forming and
+maintaining a community bounded to the system is the responsibility of
+the marketing and sales people. As long as the contract exists, there
+is no danger regarding the adoption of the project and its user
+base. In a FOSS project, none of those factors are ensured at any
+moment. Even if there is a contractor and there are employees, the
+community must be kept active and welcoming. Addressing a community,
+responding to its requirements and providing feedback to its members
+is not an easy task. What, when and how to provide feedback must be
+wisely chosen and is a time consuming activity that cannot be
+undertaken.
+
+\begin{itemize}
+\item How to balance between customer requirement and community
+  requirement?
+\item How should providing feedback be handled within an iteration?
+\item Should plans be made counting on external help or not?
+\item If so, how to estimate expectations about outside contributions?
+\item What tools or measures should be used to make it easier for
+  people to contribute?
+\item How should commits be approved or denied?
+\end{itemize}
+     
+Those are only a few questions that are unanswered when dealing with
+open source communities using an agile method. This work intends to
+provide a wider analysis of those issues to gather a more complete and
+precise list of issues related to open source development that agile
+methods do not provide answers for.
+
+\subsection{Agile contributions improving itself}
+\label{subsec:agile-self-improv}
+
+Most of the problems pointed out before are related to communication
+issues triggered by the amount of people involved in the project and
+their various knowledges and cultures. Although in open source those
+matters are taken to a limit, distributed agile teams face some of the
+same problems. Evolving a software that will be used by many people
+around the world with slightly different processes and laws may
+require distributed agile teams working geographically distant with
+specific local clients.
+
+As the current situation of Internet makes evident, users are becoming
+more and more important to the success or failure of a system. In such
+perspective, providing feedback and absorbing suggestions and critics
+will become essential to survival of a project. Just like the ability
+to adapt placed agile methods to a very important position, the
+ability to receive, select and incorporate suggestions from
+communities will probably make the difference in the near
+future. According to its own principles, agile methods should respond
+to those changes and adapt to this growing matter. The best place to
+start such work is within an extreme community such as open source.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+In this preliminary work we have shown several evidences that a
+synergy with agile methods can improve software development on FOSS
+projects. Several already adopt some agile techniques to be more
+responsive to users but a complete description of a method that
+considers all FOSS factors would surely increase adoption in those
+communities. On the other hand, solving the problem is a challenge
+that would consolidate agile methods to a distributed environment
+relying on a large user community.
+
+As part of this work, two surveys are planned. One to be conducted at
+FISL (International Free Software Forum) 2008 to understand how much
+open source developers and enthusiasts know about agile methods and
+what keeps them from using them. The other one to be conducted at
+Agile 2008 will try to discover how involved is the agile community
+with open source development. Both surveys will be used to provide a
+deeper understanding of the interaction between both communities and
+how to improve it. Also, interviews with leaders of both communities
+could help address more specific topics and gather suggestions and
+support for the results of this work.
+
+\bibliographystyle{plain} \bibliography{./biblio}
+
+\end{document}
