@@ -8,6 +8,7 @@ all: view_pdf
 
 push:
 	@echo 'Pushing commits to repository'
+	git pull origin master
 	git push origin master
 	
 commit: generate_pdf
