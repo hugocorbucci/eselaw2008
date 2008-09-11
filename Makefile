@@ -6,7 +6,7 @@ BIB_FILE=$(BIB_NAME).bib
 
 all: view_pdf
 
-push: commit
+push:
 	@echo 'Pushing commits to repository'
 	git push origin master
 	
