@@ -51,7 +51,7 @@ open source one, is given at section \ref{subsec:os-def}.
 \subsection{Agile methods definition}
 \label{subsec:agile-def}
 
-This work will consider that any software engineering methodology that
+This work will consider that any software engineering method that
 follows the principles in the Agile Manifesto \cite{AgileManifesto} is
 an agile method. Focus will be layed on the most known methods such as
 Extreme Programming \cite{XP01,XP02}, Scrum
@@ -67,24 +67,27 @@ The terms ``Open source software'' and ``Free software'' will be
 considered the same in this work although they have important
 diferences in their specific context \cite[Ch. 1, Free Versus Open
 source]{Fogel2005}. Projects will be considered to be open source (or
-free) if their source code is available and modifiable by anyone with
-the required technical knowledge without prior consentment from the
-original author and without any charge (this definition is closer from
-the free software idea than the open source one). The other
-restriction is that only projects started from individual initiatives
-will be considered to be run in an open source development fashion.
+free) if their source code is available and modifiable (maybe not in
+the same repositoryt) by anyone with the required technical knowledge
+without prior consentment from the original author and without any
+charge (this definition is closer from the free software idea than the
+open source one).
 
-Projects controlled by companies, whether they have a public source
-code and accept external collaboration or not, can be run with any
-software engineering methodology since the company can enforce it to
-her employees. Some methodologies will work better to attract external
-contributions but the company is still in control of its own team.
+Another restriction will be that projects started and controlled by a
+company do not fit in our definition of open source. The reason beside
+this is that projects controlled by companies, whether they have a
+public source code and accept external collaboration or not, can be
+run with any software engineering methodology since the company can
+enforce it to her employees. Some methodologies will work better to
+attract external contributions but the company is still in control of
+its own team and does not depend on external collaboration to run it.
 
 With a community project, nobody can enforce volunteers to follow a
 specific work way or those will abandon the project. In such
 situation, the methodology must be accepted and embraced by all people
-involved. Therefore the software engineering methods used must be
-lightweight. %Achar uma referencia sobre lightweight vs heavyweight
+involved. In such context, one cannot expect volunteers that
+contribute for fun to follow a rigid heavyweight
+process. % Achar uma referencia sobre lightweight vs heavyweight
 
 \section{Introduction}
 \label{sec:intro}
@@ -229,11 +232,11 @@ time.
 Communities created around FOSS projects involve users, developers,
 and sometimes even clients working together to craft the best software
 possible. The absence of such community around a program usually
-denounces a recent project or one that is dying. This means that the
-development team must be very attentive to this community since it
-shows how well the project is going. Nowadays, concerns related to
-this aspect of FOSS development are not specifically considered by the
-most known agile methods.
+denounces a recent project or one that is dying. Those signs mean that
+the development team must be very attentive to its software community
+since it shows the health of the project. Nowadays, concerns related
+to this aspect of FOSS development are not specifically considered by
+the most known agile methods.
 
 \section{Agile going Open source}
 \label{sec:agile}
@@ -267,11 +270,15 @@ follows.
 Part of the value that was identified in open source was the role of
 Commiter. That person, in an open source development process, is the
 one responsible for maintaining the quality of the trunk branch of the
-version control repository. According to Riehle %/cite
-, the Commiter role is a valuable status recognition of quality
+version control repository. According to Riehle \cite{Riehle2007}, the
+Commiter role is a valuable status recognition of quality
 contributions. Agile methods entrust this role to every developer and
 it was suggested in the workshop that it might be good to have some
-sort of control to the trunk branch to ensure simplicity of the code.
+sort of control to the trunk branch to ensure simplicity of the
+code. While this suggestion may appear to conflict with the collective
+code property, the Commiter in the open source model is not the owner
+of the code more than any other person so the code is collective
+anyway.
 
 Another important point was the publicity of all results regarding the
 project. According to Reis, non open source software can also benefit
