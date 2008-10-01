@@ -281,90 +281,136 @@ the other?'', was coordinated by Mary Poppendieck and had Christian
 Reis as the invited guest. Reis is a Brazilian open source developer
 working at Canonical Inc. on the development of LaunchPad, the project
 management software for Ubuntu Linux distribution. The workshop
-started with Reis' presentation on how LaunchPad is developed. A few
-points were highlighted as important differences and will be presented
-on the following list.
-\begin{itemize}
-\item The commiter role
+started with Reis' presentation on how LaunchPad is developed. Three
+main points were highlighted during the conversation that followed the
+presentation and will be describe in the next subsection. The first
+one (Section \ref{subsubsec:commiter}) described and discussed the
+role of commiter. The second one (Section \ref{subsubsec:publicity})
+presented the benefits of having a transparent and public process and
+the last (Section \ref{subsubsec:crossrev}) talked about cross
+reviewing systems used to ensure communication and clarity of the
+code.
 
-  Part of the value that was identified in open source was the role of
-  commiter.  A commiter is a person that have rights to add source
-  code to the trunk branch of the version control repository. The
-  trunk branch is the portion of the code that is packaged to form a
-  new version of that software. It means that the software community
-  trusts the commiter to evaluate source code. This is open source's
-  way to have most parts of the software source code reviewed to
-  reduce the amount of errors and improve the code clarity.
+\subsubsection{The commiter role}
+\label{subsubsec:commiter}
 
-  Most open source projects have a very small team of commiters.
-  Frequently the project leader is the only commiter and all patches
-  must be suggested to her. According to Riehle \cite{Riehle2007}, the
-  commiter role is a valuable status recognition of quality
-  contributions and is an explicit promotion while going from user to
-  contributor is an implicit promotion since it is only the acceptance
-  of a patch from the commiter.
+Part of the value that was identified in open source was the role of
+commiter.  A commiter is a person that have rights to add source code
+to the trunk branch of the version control repository. The trunk
+branch is the portion of the code that is packaged to form a new
+version of that software. It means that the software community trusts
+the commiter to evaluate source code. This is open source's way to
+have most parts of the software source code reviewed to reduce the
+amount of errors and improve the code clarity.
 
-  Agile methods entrust this role to every developer and it was
-  suggested in the workshop that it might be good to have some sort of
-  control to the trunk branch to ensure simplicity of the production
-  source code. In most agile methods, a team should have a leader (a
-  Scrum Master in Scrum, a Coach in Extreme Programming, etc...) that
-  is more experienced in some aspect than the rest of team. This
-  leader should have technical knowledge to discuss issues with the
-  developers and remind them of the practices they should follow.
+Most open source projects have a very small team of commiters.
+Frequently the project leader is the only commiter and all patches
+must be suggested to her. According to Riehle \cite{Riehle2007}, the
+commiter role is a valuable status recognition of quality
+contributions and is an explicit promotion while going from user to
+contributor is an implicit promotion since it is only the acceptance
+of a patch from the commiter.
 
-  It looks like a natural suggestion that the team's leader assumed
-  the role of commiter. It would allow for an external review of the
-  generated source code ensuring a higher level of clarity. This could
-  support the pair programming code review not by reducing the amount
-  of errors but by ensuring a cleaner code.
+Agile methods entrust this role to every developer and it was
+suggested in the workshop that it might be good to have some sort of
+control to the trunk branch to ensure simplicity of the production
+source code. In most agile methods, a team should have a leader (a
+Scrum Master in Scrum, a Coach in Extreme Programming, etc...) that is
+more experienced in some aspect than the rest of team. This leader
+should have technical knowledge to discuss issues with the developers
+and remind them of the practices they should follow.
 
-\item Public results
+It looks like a natural suggestion that the team's leader assumed the
+role of commiter. It would allow for an external review of the
+generated source code ensuring a higher level of clarity. This could
+support the pair programming code review not by reducing the amount of
+errors but by ensuring a cleaner code.
 
-  Another important point was the publicity of all results regarding
-  the project. According to Reis, non open source software can also
-  benefit from public bug tracking and test results although they will
-  have to accept some level of code detail to be exposed. Having such
-  public tools encourages users to participate in the development
-  process since they understand how the development is improved.
+\subsubsection{Public results}
+\label{subsubsec:publicity}
 
-  In agile software development, bug tracking and test results are
-  important information for the development team but no methodology
-  clearly state that the client or user should be directly in contact
-  with those tools. However, most say that the client should be
-  considered part of the development team which can mean he should use
-  those tools as the rest of the team does. The most used tools are
-  very crude when considered from a non-developer perspective since
-  few of them attribute a business meaning to their results. A few
-  initiatives regarding tests exist on tools \cite{RSpec,JBehave}
-  related to Behaviour Driven Development \cite{North2006} to produce
-  better reports and bug tracking systems have been improving over
-  time.
+Another important point was the publicity of all results regarding the
+project. According to Reis, non open source software can also benefit
+from public bug tracking and test results although they will have to
+accept some level of code detail to be exposed. Having such public
+tools encourages users to participate in the development process since
+they understand how the development is improved.
 
-  But publicity is not restrained to bugs or tests. Discussions
-  between members of the project and even with outsiders are always
-  logged in the mailing lists archives. Personal discussions are
-  strongly disencouraged to favor external comments and ideas. Those
-  logs help building a documentation for future users as well as
-  creating a quick feedback system to newcomers. The practice also
-  serves as a tool to improve respect between parts since all decision
-  are archived and saved for future access.
+In agile software development, bug tracking and test results are
+important information for the development team but no methodology
+clearly state that the client or user should be directly in contact
+with those tools. However, most say that the client should be
+considered part of the development team which can mean he should use
+those tools as the rest of the team does. The most used tools are very
+crude when considered from a non-developer perspective since few of
+them attribute a business meaning to their results. A few initiatives
+regarding tests exist on tools \cite{RSpec,JBehave} related to
+Behaviour Driven Development \cite{North2006} to produce better
+reports and bug tracking systems have been improving over time.
 
-  % Criticize Agile methods here. They have co-location and do not
-  % log ANYTHING. All is lost once the whiteboard is erased.
+But publicity is not restrained to bugs or tests. Discussions between
+members of the project and even with outsiders are always logged in
+the mailing lists archives. Personal discussions are strongly
+disencouraged to favor external comments and ideas. Those logs help
+building a documentation for future users as well as creating a quick
+feedback system to newcomers. The practice also serves as a tool to
+improve respect between parts since all decision are archived and
+saved for future access.
 
-\item Cross reviewing
+This sort of traceability is one of the weak points of agile
+methods. Most of them suggest that design evolves with time according
+to the needs and that this evolutions flows naturally on whiteboards
+or flipcharts. The problem with this approach is that whiteboards are
+erased and flipcharts are recycled. Even when those are persisted
+somehow (by pictures, transcription or even in the code itself), the
+discussion that led to the solution is lost. Talking is a very
+effective way to communicate but is also very ephemeros. Once the
+conversation is over, it is hard to quickly reach the precise
+information you are searching for. Emails have a much lower
+communication bandwidth but gain on their searchability. In a short
+term, it is evident that talking is more effective than writting when
+handling small teams but in a middle or long period, the gains might
+outcome (as they do in open source) the losses.
 
-  An interesting practice that LaunchPad's team use is the cross
-  revision. They do not pair program due to the geographic separation
-  between the team's members but they demand that every API
-  (Application Programming Interface) change is revised by a member of
-  an outside team that uses LaunchPad, also known as, a developer
-  user. From this practice, they benefit not only from the review but
-  also from the diversity and they enforce documented communication
-  (since all is done in mailing lists) and ensure a small explanation
-  of the change's motivation.
-\end{itemize}
+\subsubsection{Cross reviewing}
+\label{subsubsec:crossrev}
+
+The third point that Reis presented was pretty specific to
+LaunchPad. Since LaunchPad is a platform used by other teams to
+develop their own project, when there an API (Application Programming
+Interface) modification, a member from an external team that uses the
+software (preferably a different one each time) is asked to review the
+API change and its motivation. Such change cannot be added to the
+trunk branch of the repository unless it has been approved by the
+external reviwer. They call this a cross review of API changes or,
+simply, cross review.
+
+This practice tackle a few problems at once. The commiter role
+partially solves the code review problem that is addressed with pair
+programming on agile methods. Having a cross review ensures that the
+API also is as simple as it should be and still solves the user's
+problems.
+
+It also improves greatly documentation regarding that API since the
+conversation between the project developer and the user is logged
+through the mailing list. This way, future or other users can read and
+understand why the API was changed and how to use it when it is best
+suited for them. It also helps future changes and simplifications
+since it is easy to check whether the condition at the time of the
+change still holds on new versions.
+
+Finally, it also helps involving the user or client in the
+architectural decisions as well as ensures that she agrees on the
+changes. This helps discovering possible requirement problems and
+correcting them before they get implemented or inserted in the main
+code base.
+
+Obviously such practice can only apply to some level when the user is
+not a developer. Having an external review will always help ensuring
+API clarity and document the changes but it might not detect
+requirement problems if the reviewer is not a user or client.
+
+% Talvez falar sobre review collectivo de patches em bug tracks
 
 \subsection{Agile contributions improving itself}
 \label{subsec:agile-self-improv}
