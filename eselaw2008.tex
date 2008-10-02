@@ -61,10 +61,9 @@ During a workshop \cite{OOPSLA07} about ``No Silver Bullets''
 Software Development were mentioned as two failed silver bullets
 having both brought great benefit to the software community. During
 the same workshop the question was raised whether the use of several
-failed silver bullets simultaneously could not, in fact, raise
-production levels in an order of magnitude. This paper is an attempt
-to suggest one of those mergings to partially tackle software
-development problems.
+failed silver bullets simultaneously could not raise production levels
+in an order of magnitude. This is an attempt to suggest one of those
+mergings to partially tackle software development problems.
 
 The topics discussed in this work comprehend only a subset of projects
 that are said agile or open source. Section \ref{sec:definitions}
@@ -83,8 +82,8 @@ present our current and future work.
 In order to start talking about open source and agile methods, it is
 necessary to first define what is understood by such words in our
 work. Agile methods are defined at Section \ref{subsec:agile-def}
-while the most controversial definition, the open source one, is given
-at Section \ref{subsec:os-def}.
+while the open source one, more controvertial, is given at Section
+\ref{subsec:os-def}.
 
 \subsection{Agile methods definition}
 \label{subsec:agile-def}
@@ -92,11 +91,10 @@ at Section \ref{subsec:os-def}.
 This work will consider that any software engineering method that
 follows the principles in the Agile Manifesto \cite{AgileManifesto} is
 an agile method. Focus will be layed on the most known methods such as
-Extreme Programming \cite{XP01,XP02}, Scrum
-\cite{Schwaber2001,Schwaber2004} and the Crystal family
-\cite{Cockburn2002}. Closely related ideas will also be mentioned from
-the wider Lean philosophy \cite{Ohno1998} and its application to
-software development \cite{Poppendieck2005,Poppendieck2003}.
+Extreme Programming \cite{XP02}, Scrum \cite{Schwaber2004} and the
+Crystal family \cite{Cockburn2002}. Closely related ideas will also be
+mentioned from the wider Lean philosophy \cite{Ohno1998} and its
+application to software development \cite{Poppendieck2005}.
 
 \subsection{Open source definition}
 \label{subsec:os-def}
@@ -195,11 +193,11 @@ being written by volunteers. It means that \textbf{comprehensive
   documentation} grows with the community around the \textbf{working
   software}, as users encounter problems to complete a specific
 action. According to Oram's work, the most important reasons for
-contributors to write documentation is to improve the community or
-their own personal growth. This reasons explain why open source
-documentation usually comprehend the most common problems and explain
-how to use the most frequently used features but are somehow faulty to
-provide details about less popular features.
+contributors to write documentation is to their personal growth or to
+improve the community. It explains why open source documentation
+usually comprehend the most common problems and explain how to use the
+most frequently used features but are faulty to provide details about
+less popular features.
 
 \subsection{Customer collaboration over contract negotiation}
 \label{subsec:third-princ}
@@ -273,7 +271,7 @@ principles that were applied to open source projects and could help
 agile methods. A short summary of the discussion can be found in
 section \ref{subsec:foss-over-agile}.  Thinking the other way around,
 agile methodologies lack some special solutions related to open source
-development. Finally section \ref{subsec:agile-self-improv} will
+development. Finally section \ref{subsec:agile-improve-os} will
 shortly present some benefits could be introduced in agile methods.
 
 \subsection{FOSS principles agile should learn from}
@@ -293,7 +291,6 @@ presents the benefits of having a transparent and public process and
 the last (Section \ref{subsubsec:crossrev}) talks about cross
 reviewing systems used to ensure communication and clarity of the
 code.
-
 \subsubsection{The commiter role}
 \label{subsubsec:commiter}
 
@@ -340,7 +337,6 @@ leader could become the bottleneck for code production or would have
 to abandon his other tasks to fulfill this one. An idea here would be
 to have a small set of developers being commiters and this role would
 circle within the team until it chooses his own fixed commiters.
-
 \subsubsection{Public results}
 \label{subsubsec:publicity}
 
@@ -386,7 +382,6 @@ communication bandwidth but gain on their searchability. In a short
 term, it is evident that talking is more effective than writting when
 handling small teams but in a middle or long period, the gains might
 outcome (as they do in open source) the losses.
-
 \subsubsection{Cross reviewing}
 \label{subsubsec:crossrev}
 
@@ -416,35 +411,108 @@ change still holds on new versions.
 Finally, it also helps involving the user or client in the
 architectural decisions as well as ensures that she agrees on the
 changes. This helps discovering possible requirement problems and
-correcting them before they get implemented or inserted in the main
-code base.
-
-Obviously such practice can only apply to some level when the user is
-not a developer. Having an external review will always help ensuring
+correcting them before they get implemented in the main code
+base. Obviously such practice can only apply to some level when the
+user is not a developer. Having an external review will help ensuring
 API clarity and document the changes but it might not detect
 requirement problems if the reviewer is not a user or client.
-
-% Talvez falar sobre review collectivo de patches em bug tracks
-
-\subsection{Agile contributions improving itself}
-\label{subsec:agile-self-improv}
+\subsection{Agile contributions to improve Open Source}
+\label{subsec:agile-improve-os}
 
 Most of the problems pointed out before are related to communication
 issues triggered by the amount of people involved in the project and
 their various knowledges and cultures. Although in open source those
 matters are taken to a limit, distributed agile teams face some of the
-same problems.
+same problems \cite{Sutherland2007,Maurer2002}.
 
-As the current situation of Internet makes evident, users are becoming
-more and more important to the success or failure of a system. In such
-perspective, providing feedback and absorbing suggestions and critics
-will become essential to survival of a project. Just like the ability
-to adapt placed agile methods on a very important position, the
-ability to receive, select and incorporate suggestions from
-communities will probably make the difference in the near
-future. According to its own principles, agile methods should respond
-to those changes and adapt to this growing matter. The best place to
-start such work is within a community such as open source.
+As Beck suggests \cite{Beck2008}, tools can improve the adoption and
+use of agile practices and, therefore, improve a development
+process. A fair amount of work has been directed to distributed pair
+programming tools \cite{Xpairtise} and studies \cite{Nagappan2003} but
+very few tools have been produced to support other practices. Since
+communication is at stack, a few other practices are related to it in
+agile methods. The following subsections will present those practices
+and the tools to improve the open source experience with agile
+development.
+\subsubsection{Informative Workspace}
+\label{subsubsec:inform-worksp}
+
+This practice suggests that an agile team should work in an
+environment that gives them information regarding their work. Beck
+assigns a specific role, the tracker role, to the entity that should
+maintain this information available and updated to the team. With
+co-located teams, the tracker usually collects metrics \cite{Sato2007}
+automatically and selects a few of them to present in the
+workspace. Most of the objetive metrics are related to the code base
+while subjective ones depend on developers' opinions.
+
+Collecting those data is not a hard task but they are usually time
+consuming and do not produce immediate benefit to the software
+advance. This is probably the reason why it is very rare to find an
+open source project with updated metrics and data in their website. A
+tool that could improve such scenario would be web-based plugin system
+with a built-in metrics collection as well as a way to add and present
+new metrics. Such tool should be available into open source forge
+applications to allow projects to easily connect them to their
+repository and webpage.
+\subsubsection{Stories}
+\label{subsubsec:stories}
+
+Regarding the planning system, extreme programming suggest that
+requirements should be collected in user story cards. The goal is to
+minimize the amount of effort required to discover the next step to
+make and being able to easily change those requirements priority over
+time. Open source projects usually are based on bug tracking systems
+to store those requirements. A feature missing is reported as a bug
+that should be corrected and discussions and patch suggestions are
+submitted related to that ``bug''. The problem with this approach is
+that changing priority and setting a release plan is very time
+consuming and relies on non documented assumptions (such as ``this
+release should solve priority bugs over 8''). It is also very hard to
+picture an overall view of all the requirements.
+
+Discovering what are the main priorities for the team quickly and
+being able to change those priority according to the community's
+feedback is key to develop a working software. To help achieve this, a
+tool should be implemented to allow bugs to be seen as movable
+elements on a release planning. It should also have the bug's priority
+and content set by the community in a similar way as Wikipedia manages
+its articles.
+\subsubsection{Retrospective}
+\label{subsubsec:retrospect}
+
+This practice suggests that the team should gather periodically to
+discuss the way the project is going. There are two issues in such
+practice in open source software teams. The first one is to have all
+members of the team present at the same time. The second one is to
+have them interact collectivelly in a shared area placing notes on
+time stating problems and good things they felt.
+
+When the team is co-located, this is usually done a meeting room with
+a huge time line and coloured post-its. Our suggestion is to develop a
+web-based tool to allow such interaction relating the time line to the
+code repository base. The team would be able to annotate
+assynchronously the time line. The team leader would ocasionally
+generate a report sent to all members as well as posted in the
+informative workspace.
+\subsubsection{Stand up meetings}
+\label{subsubsec:stand-up}
+
+This practice, originally suggested in the Scrum methodology, shares
+the same problem as the retrospective. It envolves having the team
+together at the same time. Several open source projects already have a
+partial solution to this practice using an IRC channel to centralize
+the discussions during development time. Although it does not ensure
+everyone gets to know what other members are doing, it helps
+synchronizing work.
+
+To ensure members get the required knowledge, we suggest that those
+IRC channels should be logged and present the last few messages to
+newcomers at every login. It should also be possible for members to
+leave notes from that channel to the bug tracking system as well as
+messages to other contributors. On IRC channel, this sort of solution
+is usually performed by a bot which we intend to associate to the
+project website.
 
 \section{Conclusion}
 \label{sec:conclusion}
@@ -465,11 +533,14 @@ what keeps them from using them. The other one to be conducted at
 Agile 2009 will try to discover how involved is the agile community
 with open source development. Both surveys will be used to provide a
 deeper understanding of the interaction between both communities and
-how to improve it. Also, interviews with leaders of both communities
-could help address more specific topics and gather suggestions and
-support for the results of this work.
+how to improve it.
 
-% Add a summary on helps
+\section{Acknowledgements}
+
+This work was supported by the QualiPSo project \cite{Qualipso}. We
+would like to thank Christian Reis for his help, interesting
+discussions and support as well as Mariana V. Bravo and Danilo Sato
+for reviewing this work.
 
 \bibliographystyle{plain} \bibliography{./biblio}
 
