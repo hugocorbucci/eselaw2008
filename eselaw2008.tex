@@ -27,29 +27,31 @@
 
 \maketitle
 
-\section{Introduction}
+\begin{abstract}
+  Agile methods and open source software communities share similar
+  cultures with different approaches to overcome problems. Although
+  several professionals are involved in both worlds, neither agile
+  methodologies are as strong as they could be in open source
+  communities nor those communities provide strong contributions to
+  agile methods. This work identifies and expose the
+  obstacles that separate those communities in order to extract the
+  best of them and improve both sides with suggestions of tools and
+  development processes.
+\end{abstract}
 
-Agile methods and open source software communities share similar
-cultures with different approaches to overcome problems. Although
-several professionals are involved in both worlds, neither agile
-methodologies are as strong as they could be in open source
-communities nor those communities provide strong contributions to
-agile methods. This work intends to identify and expose the obstacles
-that separate those communities in order to extract the best of them
-and improve both sides with suggestions of tools and development
-processes.
+\section{Introduction}
 
 Typical community open source projects (to be defined on Section
 \ref{subsec:os-def}) usually receive the collaboration of many
 geographically distant people \cite{Dempsey1999} and are organized
-around a leader and she is the only hierarquical structure in the
-group. At first, this argument could indicate that such projects are
-not candidates for the use of agile methods since some basic values
-seem to be damaged. For example, the distance and diversity separating
+around a leader is the only hierarquical structure in the group. At
+first, this argument could indicate that such projects are not
+candidates for the use of agile methods since some basic values seem
+to be damaged. For example, the distance and diversity separating
 developers surely deteriorate communication, one of the most important
 values within agile methods. However, most open source projects share
-principles with the Agile Manifesto \cite{AgileManifesto}. Being ready
-for changes, working with continuous feedback, delivering real
+some principles of the Agile Manifesto \cite{AgileManifesto}. Being
+ready for changes, working with continuous feedback, delivering real
 features, respecting collaborators and users and facing challenges are
 expected attitudes from agile developers naturally found in the Free
 and Open Source Software (FOSS) communities.
@@ -79,10 +81,10 @@ present our current and future work.
 \label{sec:definitions}
 
 In order to start talking about open source and agile methods, it is
-necessary to first define what is understood by such words in the
-following work. Agile methods are defined at Section
-\ref{subsec:agile-def} while the most controversial definition, the
-open source one, is given at Section \ref{subsec:os-def}.
+necessary to first define what is understood by such words in our
+work. Agile methods are defined at Section \ref{subsec:agile-def}
+while the most controversial definition, the open source one, is given
+at Section \ref{subsec:os-def}.
 
 \subsection{Agile methods definition}
 \label{subsec:agile-def}
@@ -125,15 +127,17 @@ regarding free or open source software contributors. Their collected
 data \cite{FlossStats} shows on question 42 that 78.77\% of the
 contributors are employed or self-employed and that only 50.82\% of
 the open source community are software developers while 24.76\% do not
-earn their main income with software development (question 10). This
-is relevant because it bases the result that 78.78\% of open source
-collaborators think working on those projects is more joyful (question
-22.2) and 42.3\% find it also better organized (question 22.4).
+earn their main income with software development (question 10).  In
+addition to those results, the survey presents the fact that 78.78\%
+of the collaborators consider their open source tasks more joyful
+(question 22.2) than their regular activities and 42.3\% also consider
+them better organized (question 22.4). All those data show open source
+contributors perceive their activities both pleasurable and effective.
 
 Those data suggest that imposing a more traditional software
 development process on such community has not been succesful. Another
 survey \cite{Reis2003} points out that 74\% of open source projects
-have teams up to 5 people and 62\% work with each other over the
+have teams with up to 5 people and 62\% work with each other over the
 Internet and never met physically or personally. It is therefore
 critical for those projects to have an adequate software process that
 fits those characteristics and is not a burden on the volunteer work.
@@ -144,8 +148,8 @@ fits those characteristics and is not a burden on the volunteer work.
 Open source communities could almost be considered agile and they
 indeed were by Martin Fowler in his first version of ``The New
 Methodology'' \cite{Fowler00orig}. The methods that Eric Raymond
-describes in ``The Cathedral and the Bazaar'' \cite{Raymond1998} lack a
-more precise definition but several ideas could be related to the
+describes in ``The Cathedral and the Bazaar'' \cite{Raymond1998} lack
+a more precise definition but several ideas could be related to the
 Agile Manifesto. The next four subsections will discuss the relations
 of open source to the four principles of the manifesto and the fifth
 one will summarize points where open source could improve towards
@@ -158,8 +162,8 @@ Several researches regarding open source software development present
 a reasonable amount of tools used by the developers to maintain
 communication between their members. Reis \cite{Reis2003} shows that
 version control software, the website and mailing lists are the most
-used tools (over 65\% of the project use them) to communicate with the
-users and in the team.
+used tools (over 65\% of the projects use them) to communicate with
+the users and in the team.
 
 Several of the tools used in the open software process are also used
 in the agile software development, such as version control programs
@@ -179,11 +183,11 @@ needs.
 \subsection{Working software over comprehensive documentation}
 \label{subsec:second-princ}
 
-According to Reis \cite{Reis2003}, 55\% of open source projects update
-and revise their documentation frequently and 30\% maintain documents
-that explain how parts of it work or how is it organized. Those
-results show that documentation is not considered to be essential on
-the projects.
+According to Reis \cite{Reis2003}, 55\% of the open source projects
+update and revise their documentation frequently and 30\% maintain
+documents that explain how parts of it work or how is it
+organized. Those results show that documentation is not considered to
+be essential on the projects.
 
 More recently, Oram \cite{Oram2007} presented the results of a survey
 conducted by O'Reilly showing that free documentation is increasingly
@@ -192,7 +196,7 @@ being written by volunteers. It means that \textbf{comprehensive
   software}, as users encounter problems to complete a specific
 action. According to Oram's work, the most important reasons for
 contributors to write documentation is to improve the community or
-their own personal growth. This motives explain why open source
+their own personal growth. This reasons explain why open source
 documentation usually comprehend the most common problems and explain
 how to use the most frequently used features but are somehow faulty to
 provide details about less popular features.
@@ -226,7 +230,7 @@ Open source projects tend to have a plan of milestones or releases
 but, in most cases, those plans are always short term plans. Even when
 long term plans exist, they are not the main guidelines followed by
 the developer team. They are only goals sought without any pressure to
-be met.
+be met. % TODO: Achar referencia
 
 Being too demanding about \textbf{following a plan} can drag a whole
 project down in the open source world. The main reason is the highly
@@ -241,23 +245,23 @@ cannot compete with a newcomer that adapts more quickly to user needs.
 
 Although several points of the Agile Manifesto are followed within
 open source communities, nothing is certain because there is no such
-thing as an open source method. Raymond's description \cite{Raymond1999}
-is a great example of how the process can work but it does not
-discriminate guidelines and practices to be followed. If a full open
-source agile method description was written with the use of compatible
-tools merging the ideas presented by Raymond, it would follow the same
-selection rules as the projects. If successful, its adoption would
-then spread around the community improving and correcting it over
-time.
+thing as an open source method. Raymond's description
+\cite{Raymond1999} is a great example of how the process can work but
+it does not discriminate guidelines and practices to be followed. If a
+full open source agile method description was written with the use of
+compatible tools merging the ideas presented by Raymond, it would
+follow the same selection rules as the projects. If successful, its
+adoption would then spread around the community improving and
+correcting it over time.
 
 Communities created around FOSS projects involve users, developers,
 and sometimes even clients working together to craft the best software
 possible. The absence of such community around a program usually
 denounces a recent project or one that is dying. Those signs mean that
 the development team must be very attentive to its software community
-which shows the health of the project. Nowadays, concerns related
-to this aspect of FOSS development are not specifically considered by
-the most known agile methods.
+which shows the health of the project. Nowadays, concerns related to
+this aspect of FOSS development are not specifically considered by the
+most known agile methods.
 
 \section{Agile going Open source}
 \label{sec:agile}
@@ -270,24 +274,23 @@ agile methods. A short summary of the discussion can be found in
 section \ref{subsec:foss-over-agile}.  Thinking the other way around,
 agile methodologies lack some special solutions related to open source
 development. Finally section \ref{subsec:agile-self-improv} will
-shortly present some benefits that agile would receive from attempts
-to solve those problems.
+shortly present some benefits could be introduced in agile methods.
 
 \subsection{FOSS principles agile should learn from}
 \label{subsec:foss-over-agile}
 
 The workshop, intitled ``Open Source Meets Agile - What can each teach
 the other?'', was coordinated by Mary Poppendieck and had Christian
-Reis as the invited guest. Reis is a Brazilian open source developer
+Reis as an invited guest. Reis is a Brazilian open source developer
 working at Canonical Inc. on the development of LaunchPad, the project
 management software for Ubuntu Linux distribution. The workshop
 started with Reis' presentation on how LaunchPad is developed. Three
-main points were highlighted during the conversation that followed the
+main points were highlighted during the discussions that followed the
 presentation and will be describe in the next subsection. The first
-one (Section \ref{subsubsec:commiter}) described and discussed the
+one (Section \ref{subsubsec:commiter}) describes and discusses the
 role of commiter. The second one (Section \ref{subsubsec:publicity})
-presented the benefits of having a transparent and public process and
-the last (Section \ref{subsubsec:crossrev}) talked about cross
+presents the benefits of having a transparent and public process and
+the last (Section \ref{subsubsec:crossrev}) talks about cross
 reviewing systems used to ensure communication and clarity of the
 code.
 
@@ -305,11 +308,19 @@ amount of errors and improve the code clarity.
 
 Most open source projects have a very small team of commiters.
 Frequently the project leader is the only commiter and all patches
-must be suggested to her. According to Riehle \cite{Riehle2007}, the
-commiter role is a valuable status recognition of quality
-contributions and is an explicit promotion while going from user to
-contributor is an implicit promotion since it is only the acceptance
-of a patch from the commiter.
+must be suggested to her. According to Riehle \cite{Riehle2007}, there
+are three stages in open source common hierarquy. The first level is
+to be a user. Being a user, you get the right to use the software and
+report bugs and request features. The second level is being a
+contributor. The promotion between the first and the second level is
+implicit. It happens when a commiter accepts your patch and send it to
+the trunk branch. Nobody except the commiter and the contributor know
+about this change. The third role is the commiter one. At this level,
+the transition is explicit. Contributors and commiters vouch for a
+contributor and recognize publicly the overall quality of his
+work. Reaching the commiter level is a very valuable promotion that
+means you produce good quality code and is involved in the project's
+development.
 
 Agile methods entrust this role to every developer and it was
 suggested in the workshop that it might be good to have some sort of
@@ -320,11 +331,15 @@ more experienced in some aspect than the rest of team. This leader
 should have technical knowledge to discuss issues with the developers
 and remind them of the practices they should follow.
 
-It looks like a natural suggestion that the team's leader assumed the
-role of commiter. It would allow for an external review of the
+It looks like a natural suggestion that the team's leader may assume
+the role of commiter. It would allow for an external review of the
 generated source code ensuring a higher level of clarity. This could
 support the pair programming code review not by reducing the amount of
-errors but by ensuring a cleaner code.
+errors but by ensuring a cleaner code. On the other hand, the team's
+leader could become the bottleneck for code production or would have
+to abandon his other tasks to fulfill this one. An idea here would be
+to have a small set of developers being commiters and this role would
+circle within the team until it chooses his own fixed commiters.
 
 \subsubsection{Public results}
 \label{subsubsec:publicity}
@@ -364,7 +379,7 @@ or flipcharts. The problem with this approach is that whiteboards are
 erased and flipcharts are recycled. Even when those are persisted
 somehow (by pictures, transcription or even in the code itself), the
 discussion that led to the solution is lost. Talking is a very
-effective way to communicate but is also very ephemeros. Once the
+effective way to communicate but is also very ephemeral. Once the
 conversation is over, it is hard to quickly reach the precise
 information you are searching for. Emails have a much lower
 communication bandwidth but gain on their searchability. In a short
@@ -377,19 +392,18 @@ outcome (as they do in open source) the losses.
 
 The third point that Reis presented was pretty specific to
 LaunchPad. Since LaunchPad is a platform used by other teams to
-develop their own project, when there an API (Application Programming
-Interface) modification, a member from an external team that uses the
-software (preferably a different one each time) is asked to review the
-API change and its motivation. Such change cannot be added to the
-trunk branch of the repository unless it has been approved by the
-external reviwer. They call this a cross review of API changes or,
-simply, cross review.
+develop their own project, when there is an API (Application
+Programming Interface) modification, a member from an external team
+that uses the software (preferably a different one each time) is asked
+to review the API change and its motivation. Such change cannot be
+added to the trunk branch of the repository unless it has been
+approved by the external reviwer. They call this a cross review of API
+changes or, simply, cross review.
 
 This practice tackle a few problems at once. The commiter role
 partially solves the code review problem that is addressed with pair
 programming on agile methods. Having a cross review ensures that the
-API also is as simple as it should be and still solves the user's
-problems.
+API will be approved by two different developpers.
 
 It also improves greatly documentation regarding that API since the
 conversation between the project developer and the user is logged
